@@ -1,0 +1,12 @@
+apiVersion: mutations.gatekeeper.sh/v1alpha1
+kind: AssignMetadata
+metadata:
+  name: label-location
+spec:
+  match:
+    scope: Namespaced
+    namespaces: ["default"]
+  location: "metadata.labels.location"
+  parameters:
+    assign:
+      value: "puerto-rico"

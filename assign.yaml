@@ -1,0 +1,16 @@
+apiVersion: mutations.gatekeeper.sh/v1alpha1
+kind: Assign
+metadata:
+  name: set-privileged-false
+spec:
+  applyTo:
+  - groups: [""]
+    kinds: ["Pod"]
+    versions: ["v1"]
+  match:
+    scope: Namespaced
+    namespaces: ["default"]
+  location: "spec.containers[name:*].securityContext.privileged"
+  parameters:
+    assign:
+      value: false
