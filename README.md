@@ -1,4 +1,4 @@
-# Gatekeeper playground
+# Gatekeeper mutation playground
 
 
 Based on article https://medium.com/@LachlanEvenson/mutating-kubernetes-resources-with-gatekeeper-3e5585d49ead
